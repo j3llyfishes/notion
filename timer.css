@@ -2,6 +2,13 @@
 
 /* General */
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
 body {
   font-family: 'Roboto Mono', monospace;
   background-color: #191919;
@@ -11,7 +18,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: auto;
+  min-height: 0;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 button,
@@ -37,12 +47,13 @@ button:focus {
 /* Clock Body */
 
 .clock-container {
-  background-color: rgb(96, 135, 61); 
+  background-color: rgb(96, 135, 61);
   width: 350px;
+  max-width: calc(100% - 30px);
   border-radius: 20px;
   padding: 30px;
   box-shadow: 10px 10px khaki;
- 
+  box-sizing: border-box;
 }
 
 /* Display + Stop/Start/Reset Controls */
@@ -80,7 +91,6 @@ button:focus {
   margin-left: 30px;
   display: flex;
   justify-content: space-between;
-  flex-start: end;
 }
 
 /* Timer Length Controls */
@@ -97,17 +107,17 @@ button:focus {
   flex-direction: row;
   justify-content: center;
   width: 140px;
-  height:60px;
+  height: 60px;
 }
 
-.break-container, 
+.break-container,
 .session-container {
   text-align: center;
-/*   display: inline-block; */
   border: 2px solid rgb(211, 180, 98);
   padding: 10px;
   border-radius: 10px;
   width: 48%;
+  box-sizing: border-box;
 }
 
 .timer-length {
